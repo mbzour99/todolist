@@ -26,7 +26,7 @@ export default function FruitForm() {
             <label>
                 <input type="checkbox" checked={isTasty} onChange={e => setIsTasty(e.target.checked)}/> Is it tasty?
             </label>
-            <button>Take a bite!</button>
+            <button onClick={handleSubmit}>Take a bite!</button>
         </form>
     );
 }

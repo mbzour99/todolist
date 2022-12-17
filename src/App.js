@@ -2,11 +2,11 @@ import { useState } from 'react';
 import './App.css';
 // import Example from './components/Example';
 import { FormText } from './components/FormText';
-// import FruitForm from './components/FruitForm';
+import FruitForm from './components/FruitForm';
 import { ShowList } from './components/ShowList';
 
 function App() {
-const [mlist,setMlist]=useState([{text:'defalt Text',status:false}]);
+const [mlist,setMlist]=useState([{text:'defalt Text'}]);
 // const [dindex,setDindex]=useState(0);
 // const inetstate =false;
 
@@ -24,14 +24,13 @@ setMlist([...mlist.slice(0,dindex),...mlist.slice(dindex+1)]);
 
 }
 
-
   return (
     <div className="App">
 
      <FormText addText={addTextToList}></FormText>
      <ShowList todelete={delelel} showlistm={mlist}></ShowList> 
-      {/* <FruitForm></FruitForm>
-     <Example></Example> */}
+     <FruitForm></FruitForm>
+    {/* <Example></Example> */}
     </div>
   );
 
